@@ -98,6 +98,7 @@ class ViewController: UIViewController, XMLParserDelegate, UITextFieldDelegate {
         self.bairroTextField.text = self.dicionarioDados["bairro"]
         self.localidadeTextField.text = self.dicionarioDados["localidade"]
         self.ufTextField.text = self.dicionarioDados["uf"]
+        self.cepTextField.text = self.dicionarioDados["cep"]
         
     }
     
