@@ -103,13 +103,17 @@ class ViewController: UIViewController, XMLParserDelegate, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
+        guard let cep = textField.text else{
+            return 
+        }
+        
         if textField == self.cepTextField {
             
-            if !(textField.text?.isEmpty)!{
+            if !(textField.text!.isEmpty){
                 
                 // PATH: https://viacep.com.br/ws/01001000/xml/
                 
-                let urlArquivo = URL(string: "https://viacep.com.br/ws/\(textField.text!)/xml/")
+                let urlArquivo = URL(string: "https://viacep.com.br/ws/\(cep)/xml/")
                 
                 let xmlParser = XMLParser(contentsOf: urlArquivo!)
                 
