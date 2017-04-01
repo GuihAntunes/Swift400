@@ -29,7 +29,7 @@ class ViewController: UIViewController, XMLParserDelegate {
 
 
         // Criando o caminho até o documento XML
-        let urlArquivo = URL(string: "https://viacep.com.br/ws/01001000/xml/")
+        let urlArquivo = URL(string: "https://viacep.com.br/ws/05410000/xml/")
 
         // Criando um objeto que fará o parse (interpretação) do nosso XML. A classe responsável por essa interpretação é a XMLParser
 
@@ -50,7 +50,7 @@ class ViewController: UIViewController, XMLParserDelegate {
 
 	// MARK: - Methods
     
-    func limparVariaveisDeControle(){
+    private func limparVariaveisDeControle(){
         
         self.conteudoTag = ""
         self.tagAtual = ""
@@ -66,6 +66,29 @@ class ViewController: UIViewController, XMLParserDelegate {
     }
 
     func parserDidEndDocument(_ parser: XMLParser) {
+        
+        // Exibindo o dicionario de saída
+        print(self.dicionarioDados)
+        
+        let cep = self.dicionarioDados["cep"]
+        let unidade = self.dicionarioDados["unidade"]
+        let uf = self.dicionarioDados["uf"]
+        let bairro = self.dicionarioDados["bairro"]
+        let localidade = self.dicionarioDados["localidade"]
+        let logradouro = self.dicionarioDados["logradouro"]
+        let complemento = self.dicionarioDados["complemento"]
+        let ibge = self.dicionarioDados["ibge"]
+        let gia = self.dicionarioDados["gia"]
+        
+        print("\nCEP: \(cep)")
+        print("Unidade: \(unidade)")
+        print("UF: \(uf)")
+        print("Bairro: \(bairro)")
+        print("Localidade: \(localidade)")
+        print("Logradouro: \(logradouro)")
+        print("Complemento: \(complemento)")
+        print("IBGE: \(ibge)")
+        print("GIA: \(gia)\n")
 
     }
 
@@ -78,8 +101,6 @@ class ViewController: UIViewController, XMLParserDelegate {
         if elementName == "cep" || elementName == "unidade" || elementName == "uf" || elementName == "bairro" || elementName == "localidade" || elementName == "gia" || elementName == "complemento" || elementName == "logradouro" || elementName == "ibge"{
             
             self.conteudoTag = ""
-            
-            
 
         }
 
@@ -168,7 +189,13 @@ class ViewController: UIViewController, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         
-        
+        if self.tagAtual == "cep" || self.tagAtual == "unidade" || self.tagAtual == "uf" || self.tagAtual == "bairro" || self.tagAtual == "localidade" || self.tagAtual == "gia" || self.tagAtual == "complemento" || self.tagAtual == "logradouro" || self.tagAtual == "ibge" {
+            
+            
+            self.conteudoTag += string
+            
+            
+        }
         
     }
 
