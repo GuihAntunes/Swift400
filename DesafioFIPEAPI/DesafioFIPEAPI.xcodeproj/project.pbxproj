@@ -12,6 +12,9 @@
 		43E838811E990ED10030E07A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E8387F1E990ED10030E07A /* Main.storyboard */; };
 		43E838831E990ED10030E07A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E838821E990ED10030E07A /* Assets.xcassets */; };
 		43E838861E990ED10030E07A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E838841E990ED10030E07A /* LaunchScreen.storyboard */; };
+		43E8388E1E991A3F0030E07A /* TelaVeiculosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E8388D1E991A3F0030E07A /* TelaVeiculosViewController.swift */; };
+		43E838901E9924780030E07A /* TelaVeiculoEspecificoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E8388F1E9924780030E07A /* TelaVeiculoEspecificoViewController.swift */; };
+		43E838921E9929400030E07A /* TelaFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E838911E9929400030E07A /* TelaFinalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		43E838821E990ED10030E07A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E838851E990ED10030E07A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43E838871E990ED10030E07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43E8388D1E991A3F0030E07A /* TelaVeiculosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaVeiculosViewController.swift; sourceTree = "<group>"; };
+		43E8388F1E9924780030E07A /* TelaVeiculoEspecificoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaVeiculoEspecificoViewController.swift; sourceTree = "<group>"; };
+		43E838911E9929400030E07A /* TelaFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaFinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				43E838821E990ED10030E07A /* Assets.xcassets */,
 				43E838841E990ED10030E07A /* LaunchScreen.storyboard */,
 				43E838871E990ED10030E07A /* Info.plist */,
+				43E8388D1E991A3F0030E07A /* TelaVeiculosViewController.swift */,
+				43E8388F1E9924780030E07A /* TelaVeiculoEspecificoViewController.swift */,
+				43E838911E9929400030E07A /* TelaFinalViewController.swift */,
 			);
 			path = DesafioFIPEAPI;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E8387E1E990ED10030E07A /* ViewController.swift in Sources */,
+				43E8388E1E991A3F0030E07A /* TelaVeiculosViewController.swift in Sources */,
+				43E838901E9924780030E07A /* TelaVeiculoEspecificoViewController.swift in Sources */,
 				43E8387C1E990ED10030E07A /* AppDelegate.swift in Sources */,
+				43E838921E9929400030E07A /* TelaFinalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TelaVeiculosViewController.swift
 //  DesafioFIPEAPI
 //
 //  Created by Swift on 08/04/17.
@@ -8,14 +8,10 @@
 
 import UIKit
 
-var idMarcaEscolhida = ""
-var idVeiculoEscolhido = ""
-var idVeiculoEspecifico = ""
-
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TelaVeiculosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Outlets
-    @IBOutlet weak var tableViewMarcas: UITableView!
+    @IBOutlet weak var tableViewVeiculos: UITableView!
     
     // MARK: - Properties
     var arrayElementos : [[String:AnyObject]] = []
@@ -25,23 +21,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         self.setup()
-        
         self.fazerRequisicao()
         
     }
     
     // MARK: - General Methods
+    
     func setup() {
         
-        self.tableViewMarcas.delegate = self
-        self.tableViewMarcas.dataSource = self
+        self.tableViewVeiculos.delegate = self
+        self.tableViewVeiculos.dataSource = self
         
     }
     
     func fazerRequisicao() {
         
         // Criando a URL
-        let url = URL(string: "http://fipeapi.appspot.com/api/1/carros/marcas.json")!
+        let url = URL(string: "http://fipeapi.appspot.com/api/1/carros/veiculos/\(idMarcaEscolhida).json")!
         
         // Criando a session
         let session = URLSession(configuration: URLSessionConfiguration.default)
@@ -58,7 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         
                         DispatchQueue.main.async {
                             
-                            self.tableViewMarcas.reloadData()
+                            self.tableViewVeiculos.reloadData()
                             
                         }
                         
@@ -96,7 +92,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Actions
     
-    // MARK: - Métodos de UITableViewDataSource
+    // MARK: - UITableViewDataSource Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -108,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableViewMarcas.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
+        let cell = tableViewVeiculos.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
         
         //
         if let valor = (self.arrayElementos[indexPath.row]["fipe_name"]) {
@@ -128,10 +124,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        idMarcaEscolhida = "\(self.arrayElementos[indexPath.row]["id"]!)"
-        self.performSegue(withIdentifier: "segueTelaVeiculos", sender: nil)
+        idVeiculoEscolhido = "\(self.arrayElementos[indexPath.row]["id"]!)"
+        self.performSegue(withIdentifier: "segueVeiculoEspecifico", sender: nil)
+        
         
     }
     
 }
-

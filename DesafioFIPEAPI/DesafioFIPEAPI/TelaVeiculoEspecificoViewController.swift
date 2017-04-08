@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TelaVeiculoEspecificoViewController.swift
 //  DesafioFIPEAPI
 //
 //  Created by Swift on 08/04/17.
@@ -8,16 +8,12 @@
 
 import UIKit
 
-var idMarcaEscolhida = ""
-var idVeiculoEscolhido = ""
-var idVeiculoEspecifico = ""
+class TelaVeiculoEspecificoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     // MARK: - Outlets
-    @IBOutlet weak var tableViewMarcas: UITableView!
+    @IBOutlet weak var tableViewVeiculoEspecifico: UITableView!
     
-    // MARK: - Properties
+    // MARK: - Propriedades
     var arrayElementos : [[String:AnyObject]] = []
     
     // MARK: View Cycle Life
@@ -25,23 +21,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         self.setup()
-        
         self.fazerRequisicao()
         
     }
     
     // MARK: - General Methods
+    
     func setup() {
         
-        self.tableViewMarcas.delegate = self
-        self.tableViewMarcas.dataSource = self
+        self.tableViewVeiculoEspecifico.delegate = self
+        self.tableViewVeiculoEspecifico.dataSource = self
         
     }
     
     func fazerRequisicao() {
         
         // Criando a URL
-        let url = URL(string: "http://fipeapi.appspot.com/api/1/carros/marcas.json")!
+        let url = URL(string: "http://fipeapi.appspot.com/api/1/carros/veiculo/\(idMarcaEscolhida)/\(idVeiculoEscolhido).json")!
         
         // Criando a session
         let session = URLSession(configuration: URLSessionConfiguration.default)
@@ -58,7 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         
                         DispatchQueue.main.async {
                             
-                            self.tableViewMarcas.reloadData()
+                            self.tableViewVeiculoEspecifico.reloadData()
                             
                         }
                         
@@ -93,6 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.present(alerta, animated: true, completion: nil)
         
     }
+
     
     // MARK: - Actions
     
@@ -108,12 +105,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableViewMarcas.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
+        let cell = tableViewVeiculoEspecifico.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
         
         //
-        if let valor = (self.arrayElementos[indexPath.row]["fipe_name"]) {
+        if let valorVeiculo = (self.arrayElementos[indexPath.row]["veiculo"]) {
             
-            cell.textLabel?.text = "\(valor)"
+            cell.textLabel?.text = "\(valorVeiculo)"
+            
+        }
+        
+        if let valorName = (self.arrayElementos[indexPath.row]["name"]) {
+            
+            cell.detailTextLabel?.text = "\(valorName)"
             
         }
         
@@ -124,14 +127,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    
     // MARK: - Métodos de UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        idMarcaEscolhida = "\(self.arrayElementos[indexPath.row]["id"]!)"
-        self.performSegue(withIdentifier: "segueTelaVeiculos", sender: nil)
+        idVeiculoEspecifico = "\(self.arrayElementos[indexPath.row]["id"]!)"
+        self.performSegue(withIdentifier: "segueTelaFinal", sender: nil)
         
     }
     
 }
-
