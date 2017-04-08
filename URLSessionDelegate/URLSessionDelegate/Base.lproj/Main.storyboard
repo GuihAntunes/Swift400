@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URLSessionDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v1-Sr-Hbv">
+                                <rect key="frame" x="107" y="200" width="160" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Cw4-eI-moF"/>
+                                    <constraint firstAttribute="width" constant="160" id="Joh-o5-UvI"/>
+                                </constraints>
+                                <state key="normal" title="PUT"/>
+                                <connections>
+                                    <action selector="fazerRequisicaoPut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zi-Yh-aPj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUT-Ry-hIi">
+                                <rect key="frame" x="107" y="340" width="160" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ArN-PB-r97"/>
+                                    <constraint firstAttribute="width" constant="160" id="B11-eJ-Owq"/>
+                                </constraints>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="fazerRequisicaoPost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X0d-B3-VrH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-Jj-SP6">
+                                <rect key="frame" x="107.5" y="480" width="160" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="svr-zV-fa1"/>
+                                    <constraint firstAttribute="height" constant="80" id="uXY-0m-eqz"/>
+                                </constraints>
+                                <state key="normal" title="DELETE"/>
+                                <connections>
+                                    <action selector="fazerRequisicaoDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frG-bt-x89"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvS-As-saF">
+                                <rect key="frame" x="107.5" y="60" width="160" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="VNL-E9-mFf"/>
+                                    <constraint firstAttribute="height" constant="80" id="hZ6-hh-ct7"/>
+                                </constraints>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="fazerRequisicaoGet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgP-gJ-LAr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t9a-Jj-SP6" firstAttribute="top" secondItem="TUT-Ry-hIi" secondAttribute="bottom" constant="60" id="8MB-S9-ZGB"/>
+                            <constraint firstItem="t9a-Jj-SP6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PC5-P2-XsP"/>
+                            <constraint firstItem="1v1-Sr-Hbv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Re0-ND-ClE"/>
+                            <constraint firstItem="TUT-Ry-hIi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9I-dy-zjV"/>
+                            <constraint firstItem="VvS-As-saF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TKA-kw-1SG"/>
+                            <constraint firstItem="TUT-Ry-hIi" firstAttribute="top" secondItem="1v1-Sr-Hbv" secondAttribute="bottom" constant="60" id="gqx-tQ-D3b"/>
+                            <constraint firstItem="VvS-As-saF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="hSY-t3-Gfd"/>
+                            <constraint firstItem="1v1-Sr-Hbv" firstAttribute="top" secondItem="VvS-As-saF" secondAttribute="bottom" constant="60" id="kxQ-N5-4AG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
