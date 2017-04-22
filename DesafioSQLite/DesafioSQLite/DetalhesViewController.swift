@@ -21,7 +21,16 @@ class DetalhesViewController: UIViewController {
     // MARK: View Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.idLabel.text = ""
+        self.idadeLabel.text = ""
+        self.sobrenomeLabel.text = ""
+        self.idLabel.text = ""
+        
     }
     
     override func didReceiveMemoryWarning() {

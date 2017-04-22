@@ -127,6 +127,9 @@
                             <constraint firstItem="cFz-zk-2cD" firstAttribute="top" secondItem="Urr-lu-b61" secondAttribute="bottom" id="yh3-ee-a5c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pessoasTableView" destination="Urr-lu-b61" id="Dpk-n3-YGe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1H-mw-WCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
