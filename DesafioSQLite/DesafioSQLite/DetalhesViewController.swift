@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetalhesViewController.swift
 //  DesafioSQLite
 //
 //  Created by Swift on 22/04/17.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class DetalhesViewController: UIViewController {
+
     // MARK: - Outlets
     
     // MARK: - Propriedades
@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,11 +28,5 @@ class ViewController: UIViewController {
     // MARK: - Métodos
     
     // MARK: - Actions
-    @IBAction func cadastrarRegistro(_ sender: UIButton) {
-    }
-    
     
 }
-
-
-

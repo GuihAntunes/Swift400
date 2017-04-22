@@ -13,6 +13,8 @@
 		43B8EA7A1EABC3630098C304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B8EA791EABC3630098C304 /* Assets.xcassets */; };
 		43B8EA7D1EABC3630098C304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B8EA7B1EABC3630098C304 /* LaunchScreen.storyboard */; };
 		43B8EA861EABC39E0098C304 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B8EA851EABC39E0098C304 /* libsqlite3.tbd */; };
+		43B8EA891EABC6D40098C304 /* ListaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8EA881EABC6D40098C304 /* ListaViewController.swift */; };
+		43B8EA8B1EABC6F50098C304 /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8EA8A1EABC6F50098C304 /* DetalhesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		43B8EA7E1EABC3630098C304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43B8EA851EABC39E0098C304 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		43B8EA871EABC3AC0098C304 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		43B8EA881EABC6D40098C304 /* ListaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaViewController.swift; sourceTree = "<group>"; };
+		43B8EA8A1EABC6F50098C304 /* DetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				43B8EA721EABC3630098C304 /* AppDelegate.swift */,
 				43B8EA741EABC3630098C304 /* ViewController.swift */,
 				43B8EA761EABC3630098C304 /* Main.storyboard */,
+				43B8EA881EABC6D40098C304 /* ListaViewController.swift */,
+				43B8EA8A1EABC6F50098C304 /* DetalhesViewController.swift */,
 				43B8EA791EABC3630098C304 /* Assets.xcassets */,
 				43B8EA7B1EABC3630098C304 /* LaunchScreen.storyboard */,
 				43B8EA7E1EABC3630098C304 /* Info.plist */,
@@ -150,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B8EA8B1EABC6F50098C304 /* DetalhesViewController.swift in Sources */,
+				43B8EA891EABC6D40098C304 /* ListaViewController.swift in Sources */,
 				43B8EA751EABC3630098C304 /* ViewController.swift in Sources */,
 				43B8EA731EABC3630098C304 /* AppDelegate.swift in Sources */,
 			);
