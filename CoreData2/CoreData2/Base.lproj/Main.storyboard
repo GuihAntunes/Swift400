@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreData2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yZ-CF-uMB">
+                                <rect key="frame" x="10" y="90" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQ2-AU-RHz">
+                                <rect key="frame" x="10" y="30" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV2-J7-z9U">
+                                <rect key="frame" x="245" y="180" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="00X-9m-h5N"/>
+                                    <constraint firstAttribute="height" constant="70" id="Kia-qn-jkX"/>
+                                </constraints>
+                                <state key="normal" title="Resgatar"/>
+                                <connections>
+                                    <action selector="resgatar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8CS-h8-kpY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocy-ka-yij">
+                                <rect key="frame" x="60" y="180" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="KMy-xU-nJh"/>
+                                    <constraint firstAttribute="width" constant="70" id="keb-Ew-IXt"/>
+                                </constraints>
+                                <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="cadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32W-Dm-7uy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uV2-J7-z9U" firstAttribute="top" secondItem="6yZ-CF-uMB" secondAttribute="bottom" constant="60" id="8JU-ru-N4i"/>
+                            <constraint firstItem="CQ2-AU-RHz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Fdo-T8-YnF"/>
+                            <constraint firstAttribute="trailing" secondItem="uV2-J7-z9U" secondAttribute="trailing" constant="60" id="MCx-mE-1Fo"/>
+                            <constraint firstItem="6yZ-CF-uMB" firstAttribute="top" secondItem="CQ2-AU-RHz" secondAttribute="bottom" constant="30" id="Ue1-LW-9xo"/>
+                            <constraint firstAttribute="trailing" secondItem="6yZ-CF-uMB" secondAttribute="trailing" constant="10" id="UoE-Ff-SeH"/>
+                            <constraint firstItem="CQ2-AU-RHz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Xo8-ug-lGj"/>
+                            <constraint firstItem="ocy-ka-yij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="Ywe-yf-1KU"/>
+                            <constraint firstItem="ocy-ka-yij" firstAttribute="top" secondItem="6yZ-CF-uMB" secondAttribute="bottom" constant="60" id="fnu-dN-Rz6"/>
+                            <constraint firstAttribute="trailing" secondItem="CQ2-AU-RHz" secondAttribute="trailing" constant="10" id="szq-bd-YpU"/>
+                            <constraint firstItem="6yZ-CF-uMB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="vKS-uy-0Zt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idadeTextField" destination="6yZ-CF-uMB" id="Z3f-Rm-ZOB"/>
+                        <outlet property="nomeTextField" destination="CQ2-AU-RHz" id="yZk-mZ-RuQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
