@@ -11,6 +11,10 @@ import UIKit
 class DetalhesViewController: UIViewController {
 
     // MARK: - Outlets
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var sobrenomeLabel: UILabel!
+    @IBOutlet weak var idadeLabel: UILabel!
     
     // MARK: - Propriedades
     

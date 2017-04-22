@@ -79,6 +79,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="32V-jS-a3H"/>
+                    <connections>
+                        <outlet property="idadeTextField" destination="Bbr-Se-bbI" id="Lbu-gp-TN5"/>
+                        <outlet property="nomeTextField" destination="gbr-Mj-3zk" id="kuw-hg-pPl"/>
+                        <outlet property="sobrenomeTextField" destination="bE9-2W-EHg" id="7rd-sq-3KU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Urr-lu-b61">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="rAL-XQ-Y47">
@@ -118,7 +123,7 @@
                         <constraints>
                             <constraint firstItem="Urr-lu-b61" firstAttribute="leading" secondItem="Xrs-Qe-hjO" secondAttribute="leading" id="Add-pc-v3O"/>
                             <constraint firstAttribute="trailing" secondItem="Urr-lu-b61" secondAttribute="trailing" id="Q3R-2P-WbV"/>
-                            <constraint firstItem="Urr-lu-b61" firstAttribute="top" secondItem="kN9-R9-YhX" secondAttribute="bottom" id="VEl-cK-HmL"/>
+                            <constraint firstItem="Urr-lu-b61" firstAttribute="top" secondItem="Xrs-Qe-hjO" secondAttribute="top" id="peo-tY-8LO"/>
                             <constraint firstItem="cFz-zk-2cD" firstAttribute="top" secondItem="Urr-lu-b61" secondAttribute="bottom" id="yh3-ee-a5c"/>
                         </constraints>
                     </view>
@@ -172,31 +177,34 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="vca-ug-8SP">
-                                <rect key="frame" x="262" y="124" width="93" height="262"/>
+                                <rect key="frame" x="155" y="124" width="200" height="262"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA7-gP-2P7">
-                                        <rect key="frame" x="0.0" y="0.0" width="93" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
                                         <color key="backgroundColor" red="0.001327166334" green="0.32755678890000001" blue="0.57669931649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="3mL-kf-FyW"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeS-fj-PL7">
-                                        <rect key="frame" x="0.0" y="80.5" width="93" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="80.5" width="200" height="20.5"/>
                                         <color key="backgroundColor" red="0.001327166334" green="0.32755678890000001" blue="0.57669931649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobrenome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgH-eU-eKR">
-                                        <rect key="frame" x="0.0" y="161" width="93" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="161" width="200" height="20.5"/>
                                         <color key="backgroundColor" red="0.001327166334" green="0.32755678890000001" blue="0.57669931649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP5-jk-VPE">
-                                        <rect key="frame" x="0.0" y="241.5" width="93" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="241.5" width="200" height="20.5"/>
                                         <color key="backgroundColor" red="0.001327166334" green="0.32755678890000001" blue="0.57669931649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,6 +224,12 @@
                             <constraint firstItem="1Rc-Ae-W7A" firstAttribute="top" secondItem="ROn-a3-0EZ" secondAttribute="bottom" constant="60" id="wrU-fh-5c8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idLabel" destination="EA7-gP-2P7" id="i52-xW-Bkr"/>
+                        <outlet property="idadeLabel" destination="AP5-jk-VPE" id="zOp-I9-hdK"/>
+                        <outlet property="nomeLabel" destination="WeS-fj-PL7" id="S0k-Z5-pHK"/>
+                        <outlet property="sobrenomeLabel" destination="YgH-eU-eKR" id="Yiu-Ed-lAW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vo4-hw-Yga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
