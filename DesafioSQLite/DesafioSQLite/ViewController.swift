@@ -9,17 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
+    // MARK: - Propriedades
+    
+    // MARK: View Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    // MARK: - Métodos
+    
+    // MARK: - Actions
+    
+    
 }
+
+
 

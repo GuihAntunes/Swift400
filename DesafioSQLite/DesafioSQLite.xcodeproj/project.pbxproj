@@ -12,6 +12,7 @@
 		43B8EA781EABC3630098C304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B8EA761EABC3630098C304 /* Main.storyboard */; };
 		43B8EA7A1EABC3630098C304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B8EA791EABC3630098C304 /* Assets.xcassets */; };
 		43B8EA7D1EABC3630098C304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B8EA7B1EABC3630098C304 /* LaunchScreen.storyboard */; };
+		43B8EA861EABC39E0098C304 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B8EA851EABC39E0098C304 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		43B8EA791EABC3630098C304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B8EA7C1EABC3630098C304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43B8EA7E1EABC3630098C304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43B8EA851EABC39E0098C304 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		43B8EA871EABC3AC0098C304 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B8EA861EABC39E0098C304 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				43B8EA711EABC3630098C304 /* DesafioSQLite */,
 				43B8EA701EABC3630098C304 /* Products */,
+				43B8EA841EABC39E0098C304 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		43B8EA711EABC3630098C304 /* DesafioSQLite */ = {
 			isa = PBXGroup;
 			children = (
+				43B8EA871EABC3AC0098C304 /* Header.h */,
 				43B8EA721EABC3630098C304 /* AppDelegate.swift */,
 				43B8EA741EABC3630098C304 /* ViewController.swift */,
 				43B8EA761EABC3630098C304 /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				43B8EA7E1EABC3630098C304 /* Info.plist */,
 			);
 			path = DesafioSQLite;
+			sourceTree = "<group>";
+		};
+		43B8EA841EABC39E0098C304 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43B8EA851EABC39E0098C304 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +278,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.DesafioSQLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = DesafioSQLite/Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -276,6 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.DesafioSQLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = DesafioSQLite/Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
